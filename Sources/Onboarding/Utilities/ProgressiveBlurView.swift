@@ -12,24 +12,12 @@ public struct ProgressiveBlurView: View {
     
     public var body: some View {
         ZStack {
-            // Ensure the background is true white as it becomes more opaque
-            // This prevents the grayish tone often seen with materials on light backgrounds
-            Rectangle()
-                .fill(.white)
-                .mask(
-                    LinearGradient(
-                        colors: [.black.opacity(0), .black, .black, .black],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                )
-            
             // Layered materials with gradients to simulate variable blur
             Rectangle()
                 .fill(.ultraThinMaterial)
                 .mask(
                     LinearGradient(
-                        colors: [.black.opacity(0), .black, .black, .black, .black, .black, .black],
+                        colors: [.black.opacity(0), .black],
                         startPoint: .top,
                         endPoint: .bottom
                     )
@@ -40,7 +28,7 @@ public struct ProgressiveBlurView: View {
                 .mask(
                     LinearGradient(
                         stops: [
-                            .init(color: .clear, location: 0.2),
+                            .init(color: .clear, location: 0),
                             .init(color: .black, location: 1)
                         ],
                         startPoint: .top,
@@ -60,12 +48,22 @@ public struct ProgressiveBlurView: View {
                         endPoint: .bottom
                     )
                 )
+
+            Rectangle()
+                .fill(.background)
+                .mask(
+                    LinearGradient(
+                        colors: [.black.opacity(0), .black, .black, .black, .black, .black, .black],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
         }
         .ignoresSafeArea()
     }
 }
 
-#Preview {
+#Preview("Light Mode") {
     ZStack {
         ScrollView {
             VStack(spacing: 20) {
@@ -85,4 +83,27 @@ public struct ProgressiveBlurView: View {
                 .frame(height: 200)
         }
     }
+}
+
+#Preview("Dark Mode") {
+    ZStack {
+        ScrollView {
+            VStack(spacing: 20) {
+                ForEach(0..<20) { i in
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue.gradient)
+                        .frame(height: 100)
+                        .overlay(Text("Item \(i)").foregroundStyle(.white))
+                }
+            }
+            .padding()
+        }
+        
+        VStack {
+            Spacer()
+            ProgressiveBlurView()
+                .frame(height: 200)
+        }
+    }
+    .preferredColorScheme(.dark)
 }

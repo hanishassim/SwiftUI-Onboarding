@@ -10,6 +10,7 @@ import SwiftUI
 @MainActor
 struct AppleBottomSection {
     private let accentColor: Color
+    private let buttonTextTintColor: Color
     private let appDisplayName: String
     private let privacyPolicyURL: URL?
     private let continueAction: () -> Void
@@ -18,11 +19,13 @@ struct AppleBottomSection {
 
     init(
         accentColor: Color,
+        buttonTextTintColor: Color = .white,
         appDisplayName: String,
         privacyPolicyURL: URL?,
         continueAction: @escaping () -> Void
     ) {
         self.accentColor = accentColor
+        self.buttonTextTintColor = buttonTextTintColor
         self.appDisplayName = appDisplayName
         self.privacyPolicyURL = privacyPolicyURL
         self.continueAction = continueAction
@@ -83,18 +86,26 @@ extension AppleBottomSection: View {
     }
 
     private var continueButton: some View {
-        Button(
+        let button = Button(
             action: continueAction,
             label: continueText
         )
-        .font(.body.weight(.medium))
-        .buttonStyle(.borderedProminent)
-        .tint(accentColor)
-        .controlSize(.large)
+            .tint(accentColor)
+            .font(.body.weight(.medium))
+            .controlSize(.large)
+        
+        if #available(iOS 26.0, *) {
+            return button
+                .buttonStyle(.glassProminent)
+        }
+        
+        return button
+            .buttonStyle(.borderedProminent)
     }
 
     private func continueText() -> some View {
         Text(.actionContinue, bundle: .module)
+            .foregroundStyle(buttonTextTintColor)
             .padding(.vertical, 4)
             .frame(maxWidth: .infinity)
     }

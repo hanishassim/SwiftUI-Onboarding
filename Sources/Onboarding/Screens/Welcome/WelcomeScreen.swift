@@ -15,6 +15,7 @@ public enum WelcomeScreen {
 public extension WelcomeScreen {
     static func apple(
         accentColor: Color = .blue,
+        buttonTextTintColor: Color = .white,
         appDisplayName: String,
         appDisplayNameFont: Font = .body,
         appDisplayNameWeight: Font.Weight = .bold,
@@ -27,6 +28,7 @@ public extension WelcomeScreen {
         .apple(
             .init(
                 accentColor: accentColor,
+                buttonTextTintColor: buttonTextTintColor,
                 appDisplayName: appDisplayName,
                 appDisplayNameFont: appDisplayNameFont,
                 appDisplayNameWeight: appDisplayNameWeight,

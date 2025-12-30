@@ -70,18 +70,7 @@ extension OnboardingSheetModifier: ViewModifier {
     }
 }
 
-#Preview("Welcome Screen Only") {
-    VStack {
-        Spacer()
-    }
-    .presentOnboardingIfNeeded(
-        onboardingContent: { markComplete in
-            WelcomeScreen.mock.with(continueAction: markComplete)
-        }
-    )
-}
-
-#Preview("Welcome Screen with Flow") {
+#Preview("Welcome Screen") {
     VStack {
         Spacer()
     }

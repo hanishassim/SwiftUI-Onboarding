@@ -10,6 +10,7 @@ import SwiftUI
 public struct AppleWelcomeScreen {
     public struct Configuration {
         public let accentColor: Color
+        public let buttonTextTintColor: Color
         public let appDisplayName: String
         public let appDisplayNameFont: Font
         public let appDisplayNameWeight: Font.Weight
@@ -22,6 +23,7 @@ public struct AppleWelcomeScreen {
 
         public init(
             accentColor: Color = .blue,
+            buttonTextTintColor: Color = .white,
             appDisplayName: String,
             appDisplayNameFont: Font = .title,
             appDisplayNameWeight: Font.Weight = .bold,
@@ -33,6 +35,7 @@ public struct AppleWelcomeScreen {
             continueAction: @escaping () -> Void = {}
         ) {
             self.accentColor = accentColor
+            self.buttonTextTintColor = buttonTextTintColor
             self.appDisplayName = appDisplayName
             self.appDisplayNameFont = appDisplayNameFont
             self.appDisplayNameWeight = appDisplayNameWeight
@@ -47,6 +50,7 @@ public struct AppleWelcomeScreen {
         func with(continueAction: @escaping () -> Void) -> Self {
             .init(
                 accentColor: accentColor,
+                buttonTextTintColor: buttonTextTintColor,
                 appDisplayName: appDisplayName,
                 appDisplayNameFont: appDisplayNameFont,
                 appDisplayNameWeight: appDisplayNameWeight,
@@ -122,6 +126,7 @@ extension AppleWelcomeScreen: View {
     private func bottomSection() -> some View {
         AppleBottomSection(
             accentColor: config.accentColor,
+            buttonTextTintColor: config.buttonTextTintColor,
             appDisplayName: config.appDisplayName,
             privacyPolicyURL: config.privacyPolicyURL,
             continueAction: config.continueAction
