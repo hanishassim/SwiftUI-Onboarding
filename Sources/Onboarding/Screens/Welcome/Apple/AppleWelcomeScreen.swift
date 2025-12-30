@@ -89,15 +89,15 @@ extension AppleWelcomeScreen: View {
     public var body: some View {
         ScrollView {
             titleSection
-                .padding(.top, 52)
-
+                .padding(.top, 72)
+            
             VStack(alignment: .center, spacing: 16) {
                 featureSection
             }
             .padding(.vertical, 24)
         }
         .scrollIndicators(.hidden)
-        .defaultScrollAnchor(.center, for: .alignment)
+        .defaultScrollAnchor(.top, for: .alignment)
         .scrollBounceBehavior(.basedOnSize)
         .background(.background)
         .safeAreaInset(edge: .bottom, content: bottomSection)

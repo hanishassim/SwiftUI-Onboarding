@@ -7,7 +7,7 @@
 import SwiftUI
 
 extension Animation {
-    static let welcomeScreen: Self = .easeInOut(duration: 0.8).delay(1.6)
+    static let welcomeScreen: Self = .easeInOut(duration: 0.8).delay(2.6)
     static let titleSection: Self = .easeInOut(duration: 0.8).delay(0.2)
     static let bottomSection: Self = .easeInOut(duration: 0.8).delay(2.8)
 
