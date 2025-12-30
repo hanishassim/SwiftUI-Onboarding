@@ -43,15 +43,16 @@ struct AppleBottomSection {
 @MainActor
 extension AppleBottomSection: View {
     var body: some View {
-        VStack(alignment: .center, spacing: .zero) {
+        VStack(alignment: .leading, spacing: .zero) {
             dataPrivacyImage
             disclosureText
             continueButton
         }
-        .padding(.horizontal, 28)
-        .padding(.vertical, 24)
-        .background(.background.secondary)
-        .mask(opacityLinearGradient)
+        .padding(.horizontal, 38)
+        .padding(.top, 24)
+        .background {
+            ProgressiveBlurView()
+        }
         .opacity(isAnimating ? 1 : 0)
         .onAppear(perform: onAppear)
     }
@@ -60,7 +61,8 @@ extension AppleBottomSection: View {
         Image(.dataPrivacyResource)
             .resizable()
             .foregroundStyle(accentColor)
-            .frame(width: 40, height: 40)
+            .aspectRatio(contentMode: .fit)
+            .frame(height: 37)
     }
 
     private var disclosureText: some View {
@@ -73,10 +75,10 @@ extension AppleBottomSection: View {
                 .foregroundStyle(accentColor)
                 .bold()
         }
-        .multilineTextAlignment(.center)
-        .font(.caption)
-        .padding(.bottom, 24)
-        .padding(.top, 6)
+        .multilineTextAlignment(.leading)
+        .font(.caption2)
+        .padding(.bottom, 22)
+        .padding(.top, 8)
         .onTapGesture(perform: disclosureAction)
     }
 
@@ -85,24 +87,16 @@ extension AppleBottomSection: View {
             action: continueAction,
             label: continueText
         )
-        .font(.title3.weight(.medium))
+        .font(.body.weight(.medium))
         .buttonStyle(.borderedProminent)
         .tint(accentColor)
+        .controlSize(.large)
     }
 
     private func continueText() -> some View {
         Text(.actionContinue, bundle: .module)
-            .padding(.vertical, 6)
+            .padding(.vertical, 4)
             .frame(maxWidth: .infinity)
-    }
-
-    private func opacityLinearGradient() -> some View {
-        LinearGradient(
-            colors: [.black.opacity(0.9), .black, .black, .black],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-        .ignoresSafeArea(edges: .bottom)
     }
 }
 

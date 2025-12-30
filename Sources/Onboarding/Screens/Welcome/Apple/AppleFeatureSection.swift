@@ -55,10 +55,10 @@ struct FeatureView: View {
     }
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(alignment: .top, spacing: 12) {
             iconImage
 
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 2) {
                 titleText
                 contentText
             }
@@ -71,19 +71,19 @@ struct FeatureView: View {
         info.image
             .font(.title)
             .foregroundStyle(accentColor)
-            .frame(minWidth: 50)
+            .frame(width: 38)
     }
 
     private var titleText: some View {
         Text(info.title)
             .foregroundStyle(.primary)
-            .font(.subheadline.weight(.semibold))
+            .font(.headline.weight(.semibold))
     }
 
     private var contentText: some View {
         Text(info.content)
             .foregroundStyle(.secondary)
-            .font(.subheadline)
+            .font(.body)
     }
 }
 

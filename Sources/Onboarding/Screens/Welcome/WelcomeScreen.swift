@@ -16,6 +16,9 @@ public extension WelcomeScreen {
     static func apple(
         accentColor: Color = .blue,
         appDisplayName: String,
+        appDisplayNameFont: Font = .body,
+        appDisplayNameWeight: Font.Weight = .bold,
+        appDisplayNameWidth: Font.Width = .standard,
         appIcon: Image,
         features: [FeatureInfo],
         privacyPolicyURL: URL? = nil,
@@ -25,6 +28,9 @@ public extension WelcomeScreen {
             .init(
                 accentColor: accentColor,
                 appDisplayName: appDisplayName,
+                appDisplayNameFont: appDisplayNameFont,
+                appDisplayNameWeight: appDisplayNameWeight,
+                appDisplayNameWidth: appDisplayNameWidth,
                 appIcon: appIcon,
                 features: features,
                 privacyPolicyURL: privacyPolicyURL,

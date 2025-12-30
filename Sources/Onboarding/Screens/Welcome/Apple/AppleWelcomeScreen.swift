@@ -11,6 +11,9 @@ public struct AppleWelcomeScreen {
     public struct Configuration {
         public let accentColor: Color
         public let appDisplayName: String
+        public let appDisplayNameFont: Font
+        public let appDisplayNameWeight: Font.Weight
+        public let appDisplayNameWidth: Font.Width
         public let appIcon: Image
         public let features: [FeatureInfo]
         public let privacyPolicyURL: URL?
@@ -20,6 +23,9 @@ public struct AppleWelcomeScreen {
         public init(
             accentColor: Color = .blue,
             appDisplayName: String,
+            appDisplayNameFont: Font = .title,
+            appDisplayNameWeight: Font.Weight = .bold,
+            appDisplayNameWidth: Font.Width = .standard,
             appIcon: Image,
             features: [FeatureInfo],
             privacyPolicyURL: URL? = nil,
@@ -28,6 +34,9 @@ public struct AppleWelcomeScreen {
         ) {
             self.accentColor = accentColor
             self.appDisplayName = appDisplayName
+            self.appDisplayNameFont = appDisplayNameFont
+            self.appDisplayNameWeight = appDisplayNameWeight
+            self.appDisplayNameWidth = appDisplayNameWidth
             self.appIcon = appIcon
             self.features = features
             self.privacyPolicyURL = privacyPolicyURL
@@ -39,6 +48,9 @@ public struct AppleWelcomeScreen {
             .init(
                 accentColor: accentColor,
                 appDisplayName: appDisplayName,
+                appDisplayNameFont: appDisplayNameFont,
+                appDisplayNameWeight: appDisplayNameWeight,
+                appDisplayNameWidth: appDisplayNameWidth,
                 appIcon: appIcon,
                 features: features,
                 privacyPolicyURL: privacyPolicyURL,
@@ -76,8 +88,10 @@ public extension AppleWelcomeScreen.Configuration {
 extension AppleWelcomeScreen: View {
     public var body: some View {
         ScrollView {
-            VStack(alignment: .center, spacing: 40) {
-                titleSection
+            titleSection
+                .padding(.top, 52)
+
+            VStack(alignment: .center, spacing: 16) {
                 featureSection
             }
             .padding(.vertical, 24)
@@ -85,7 +99,7 @@ extension AppleWelcomeScreen: View {
         .scrollIndicators(.hidden)
         .defaultScrollAnchor(.center, for: .alignment)
         .scrollBounceBehavior(.basedOnSize)
-        .background(.background.secondary)
+        .background(.background)
         .safeAreaInset(edge: .bottom, content: bottomSection)
         .onAppear(perform: onAppear)
         .dynamicTypeSize(.xSmall ... .xxxLarge)
@@ -102,7 +116,7 @@ extension AppleWelcomeScreen: View {
     private var featureSection: some View {
         AppleFeatureSection(config: config)
             .opacity(isAnimating ? 1 : 0)
-            .padding(.horizontal, 48)
+            .padding(.horizontal, 40)
     }
 
     private func bottomSection() -> some View {

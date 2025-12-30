@@ -31,7 +31,7 @@ struct AppleTitleSection {
 @MainActor
 extension AppleTitleSection: View {
     var body: some View {
-        VStack(alignment: config.titleSectionAlignment, spacing: 2) {
+        VStack(alignment: config.titleSectionAlignment, spacing: 1) {
             appIconView
             welcomeToText
             appDisplayNameText
@@ -41,8 +41,8 @@ extension AppleTitleSection: View {
             maxHeight: .infinity,
             alignment: config.titleSectionAlignment.toAlignment
         )
-        .padding(.horizontal, 64)
-        .font(.largeTitle)
+        .padding(.horizontal, 38)
+        .font(.title)
         .opacity(isAnimating ? 1 : 0)
         .scaleEffect(isAnimating ? 1.0 : 0.5)
         .onAppear(perform: onAppear)
@@ -53,8 +53,9 @@ extension AppleTitleSection: View {
         if shouldShowAppIcon {
             config.appIcon
                 .resizable()
-                .frame(width: 60, height: 60)
+                .frame(width: 80, height: 80)
                 .clipShape(.rect(cornerRadius: 10))
+                .shadow(color: .black.opacity(0.1), radius: 8, y: 4)
                 .padding(.bottom)
         }
     }
@@ -62,19 +63,36 @@ extension AppleTitleSection: View {
     private var welcomeToText: some View {
         Text(.onboardingWelcomeTo, bundle: .module)
             .foregroundStyle(.primary)
-            .fontWeight(.semibold)
+            .fontWeight(.bold)
     }
 
     private var appDisplayNameText: some View {
         Text(config.appDisplayName)
+            .font(config.appDisplayNameFont)
+            .fontWeight(config.appDisplayNameWeight)
+            .fontWidth(config.appDisplayNameWidth)
             .foregroundStyle(config.accentColor)
-            .fontWeight(.bold)
     }
 }
 
-#Preview {
+#Preview("Default") {
     AppleTitleSection(
         config: .mock,
+        shouldShowAppIcon: true
+    )
+}
+
+#Preview("Custom Font") {
+    AppleTitleSection(
+        config: .init(
+            appDisplayName: "Custom Font",
+            appDisplayNameFont: .largeTitle,
+            appDisplayNameWeight: .ultraLight,
+            appDisplayNameWidth: .compressed,
+            appIcon: Image(.mockAppIconResource),
+            features: [.mock],
+            continueAction: {}
+        ),
         shouldShowAppIcon: true
     )
 }
