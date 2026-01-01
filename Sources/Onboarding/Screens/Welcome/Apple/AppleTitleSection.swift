@@ -54,8 +54,8 @@ extension AppleTitleSection: View {
             config.appIcon
                 .resizable()
                 .frame(width: 80, height: 80)
-                .clipShape(.rect(cornerRadius: 10))
-                .shadow(color: .black.opacity(0.1), radius: 8, y: 4)
+                .containerShape(.rect(cornerRadius: 10))
+                .shadow(color: .black.opacity(0.2), radius: 6, y: 4)
                 .padding(.bottom)
         }
     }

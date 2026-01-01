@@ -13,6 +13,6 @@ extension Animation {
 
     static func feature(index: Int) -> Self {
         .easeInOut(duration: 0.8)
-        .delay(1.6 + Double(index) * 0.16)
+        .delay(2.6 + Double(index) * 0.16)
     }
 }
