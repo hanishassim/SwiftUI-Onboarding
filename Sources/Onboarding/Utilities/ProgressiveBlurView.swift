@@ -7,7 +7,16 @@
 import SwiftUI
 
 /// A view that creates a "Variable Blur" effect using layered materials and gradient masks.
+
 public struct ProgressiveBlurView: View {
+    private var appBackground: Color {
+        guard let _ = UIColor(named: "AppBackground", in: .main, compatibleWith: nil) else {
+            return .black
+        }
+
+        return Color("AppBackground", bundle: .main)
+    }
+
     public init() {}
     
     public var body: some View {
@@ -17,7 +26,7 @@ public struct ProgressiveBlurView: View {
                 .fill(.ultraThinMaterial)
                 .mask(
                     LinearGradient(
-                        colors: [.black.opacity(0), .black],
+                        colors: [appBackground.opacity(0), appBackground],
                         startPoint: .top,
                         endPoint: .bottom
                     )
@@ -29,7 +38,7 @@ public struct ProgressiveBlurView: View {
                     LinearGradient(
                         stops: [
                             .init(color: .clear, location: 0),
-                            .init(color: .black, location: 1)
+                            .init(color: appBackground, location: 1)
                         ],
                         startPoint: .top,
                         endPoint: .bottom
@@ -42,7 +51,7 @@ public struct ProgressiveBlurView: View {
                     LinearGradient(
                         stops: [
                             .init(color: .clear, location: 0),
-                            .init(color: .black, location: 1)
+                            .init(color: appBackground, location: 1)
                         ],
                         startPoint: .top,
                         endPoint: .bottom
@@ -53,7 +62,7 @@ public struct ProgressiveBlurView: View {
                 .fill(.background)
                 .mask(
                     LinearGradient(
-                        colors: [.black.opacity(0), .black, .black, .black, .black, .black, .black],
+                        colors: [appBackground.opacity(0), appBackground, appBackground, appBackground, appBackground, appBackground, appBackground],
                         startPoint: .top,
                         endPoint: .bottom
                     )
