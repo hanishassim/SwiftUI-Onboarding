@@ -91,7 +91,6 @@ extension AppleBottomSection: View {
             label: continueText
         )
             .tint(accentColor)
-            .font(.body.weight(.medium))
             .controlSize(.large)
         
         if #available(iOS 26.0, *) {
@@ -107,7 +106,8 @@ extension AppleBottomSection: View {
     private func continueText() -> some View {
         Text(.actionContinue, bundle: .module)
             .foregroundStyle(buttonTextTintColor)
-            .padding(.vertical, 4)
+            .fontWeight(.semibold)
+            .font(.body)
             .frame(maxWidth: .infinity)
     }
 }
