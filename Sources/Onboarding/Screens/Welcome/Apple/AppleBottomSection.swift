@@ -100,7 +100,6 @@ extension AppleBottomSection: View {
         
         return button
             .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.capsule)
     }
 
     private func continueText() -> some View {
