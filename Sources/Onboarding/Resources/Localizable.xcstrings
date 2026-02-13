@@ -76,6 +76,12 @@
             "value" : "続行"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жалғастыру"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -205,6 +211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "完了"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дайын"
           }
         },
         "ko" : {
@@ -338,6 +350,12 @@
             "value" : "と"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "және"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -467,6 +485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "続行すると、次に同意したことになります"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жалғастыра отырып, сіз біздің"
           }
         },
         "ko" : {
@@ -600,6 +624,12 @@
             "value" : "プライバシーポリシー"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "құпиялылық саясаты"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -729,6 +759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "利用規約"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "қызмет көрсету шарттары"
           }
         },
         "ko" : {
@@ -862,6 +898,12 @@
             "value" : "Enable Notifications"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хабарландыруларды қосу"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -991,6 +1033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You'll get timely alerts right on your lock screen."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Құлыптау экраныңызда уақтылы хабарландырулар аласыз."
           }
         },
         "ko" : {
@@ -1124,6 +1172,12 @@
             "value" : "now"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "қазір"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1253,6 +1307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Example Notification"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мысал хабарландыру"
           }
         },
         "ko" : {
@@ -1386,6 +1446,12 @@
             "value" : "Maybe Later"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кейінірек"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1512,6 +1578,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9:41"
+          }
+        },
+        "kk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "9:41"
@@ -1648,6 +1720,12 @@
             "value" : "Enable alerts so we can notify you about important updates."
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Маңызды жаңартулар туралы хабарлай алуымыз үшін хабарландыруларды қосыңыз."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1777,6 +1855,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stay in the loop"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хабардар болыңыз"
           }
         },
         "ko" : {
@@ -1910,6 +1994,12 @@
             "value" : "ようこそ"
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қош келдіңіз"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2041,6 +2131,12 @@
             "value" : "はあなたのApple IDに関連付けられていないアクティビティを収集します。 "
           }
         },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " сіздің Apple ID-ңізбен байланысты емес әрекеттеріңізді жинайды. "
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2170,6 +2266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "データの管理方法を確認する..."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Деректеріңіз қалай басқарылатынын қарау..."
           }
         },
         "ko" : {
