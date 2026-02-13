@@ -16,6 +16,12 @@
             "value" : "Продължи"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parhau"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -139,6 +145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Готово"
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gorffen"
           }
         },
         "de" : {
@@ -266,6 +278,12 @@
             "value" : "и"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "a"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -389,6 +407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Продължавайки, вие се съгласявате с нашите"
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drwy barhau, rydych yn cytuno â'n"
           }
         },
         "de" : {
@@ -516,6 +540,12 @@
             "value" : "политиката за поверителност"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "polisi preifatrwydd"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -639,6 +669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "условията за ползване"
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "telerau gwasanaeth"
           }
         },
         "de" : {
@@ -766,6 +802,12 @@
             "value" : "Enable Notifications"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Galluogi Hysbysiadau"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -889,6 +931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You'll get timely alerts right on your lock screen."
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byddwch yn cael rhybuddion prydlon ar eich sgrin cloi."
           }
         },
         "de" : {
@@ -1016,6 +1064,12 @@
             "value" : "now"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nawr"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1139,6 +1193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Example Notification"
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hysbysiad Enghreifftiol"
           }
         },
         "de" : {
@@ -1266,6 +1326,12 @@
             "value" : "Maybe Later"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Efallai'n Hwyrach"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1386,6 +1452,12 @@
           }
         },
         "bg" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9:41"
+          }
+        },
+        "cy-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "9:41"
@@ -1516,6 +1588,12 @@
             "value" : "Enable alerts so we can notify you about important updates."
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Galluogi rhybuddion fel y gallwn eich hysbysu am ddiweddariadau pwysig."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1639,6 +1717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stay in the loop"
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadwch yn gyfredol"
           }
         },
         "de" : {
@@ -1766,6 +1850,12 @@
             "value" : "Добре дошли в"
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Croeso i"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1891,6 +1981,12 @@
             "value" : " събира вашата активност, която не е свързана с вашия профил в Apple. "
           }
         },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " yn casglu eich gweithgaredd, sydd ddim yn gysylltiedig â'ch Apple ID. "
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2014,6 +2110,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вижте как се управляват вашите данни..."
+          }
+        },
+        "cy-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gweler sut mae'ch data yn cael ei reoli..."
           }
         },
         "de" : {
